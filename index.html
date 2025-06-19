@@ -20,19 +20,19 @@
 </head>
 <body>
   <header class="header ">
-    <div id="overlay" class="overlay fadeout">
+    <div id="overlay" class="overlay has-fade">
 
     </div>
-    <nav class="flex flex-jc-sb flex-ai-c">
+    <nav class="flex flex-jc-sb flex-ai-c container">
       <a href="/" ><img src="images/logo.svg" class="header__logo" alt="Easybank"></a>
 
-      <a id="btn-ham" href="#" class="header__menu hide-for-desktop ">
+      <a id="btn-ham" href="#" class="header__toggle hide-for-desktop ">
         <span class="header_span"></span>
         <span class="header_span"></span>
         <span class="header_span"></span>
       </a>
 
-      <div class="header__links hide-for-mobile">
+      <div class="header__links hide-for-mobile ">
         <a href="">Home</a>
         <a href="">About</a>
         <a href="">Contact</a>
@@ -42,6 +42,14 @@
 
       <button type="button" class="header__cta hide-for-mobile">Request Invite</button>
     </nav>
+
+    <div class="header__menu a__header__menu container has-fade">
+      <a href="" >Home</a>
+      <a href="" >About</a>
+      <a href="" >Contact</a>
+      <a href="" >Blog</a>
+      <a href="" >Careers</a>
+    </div>
   </header>
 
   <!-- Home
