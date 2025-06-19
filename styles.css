@@ -3,6 +3,10 @@ html{
      box-sizing: border-box; /*element, padding and border are included in the width and height */
 }
 
+h1,h2,h3{
+    margin-top: 0;
+}
+
 nav{
     padding-top: 1.0625rem ;
     padding-bottom: 1.0625rem;
@@ -234,4 +238,88 @@ a:not(:last-child){
 }
 .noscroll{
     overflow: hidden;
+}
+
+/* Hero Section */
+
+.hero{
+    padding-bottom: 1.5rem;
+    /* for desktop */
+    @media (min-width: 750px) {
+        display: flex;
+        align-items: center;
+    }
+
+}
+.hero__container
+{
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    max-width:69.375rem ;
+    margin: 0 auto;
+}
+
+.hero__image{
+    position: relative;
+    background-image: url(/digitalbank/images/bg-intro-mobile.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 17.5rem;
+
+    @media (min-width: 750px) {
+        /* background-image: url(/digitalbank/images/bg-intro-desktop.svg);
+        background-position: left center; */
+        background-image: none;
+        flex: 3;
+        order: 2;
+        min-height: 30rem;
+    }
+}
+.hero__image::before{
+        content: "";
+        position:absolute;
+        width: 200%;
+        height: 100%;
+        /* background-image: url(/digitalbank/images/image-mockups.png); */
+        background-image: url(/digitalbank/images/bg-intro-desktop.svg);
+        background-size: 60%;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+.hero__image::after{
+        content: "";
+        position:absolute;
+        width: 100%;
+        height: 100%;
+        background-image: url(/digitalbank/images/image-mockups.png);
+        background-size: 60%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        @media(min-width:750px)
+        {
+            height: 120%;
+        }
+}
+
+.hero__text{
+    text-align: center;
+    @media (min-width: 750px) {
+        flex: 2;
+        order: 1;
+        text-align: left;
+    }
+}
+.hero__h1{
+    font-weight: 300;
+    font-size: 2.31rem;
+    line-height: 1.15;
+    color: var(--DarkBlue);
+    margin-bottom: 1.5rem;
+}
+p{
+    line-height: 1.5;
+    margin-bottom: 2.25rem;
 }
