@@ -5,6 +5,18 @@ html{
 
 h1,h2,h3{
     margin-top: 0;
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--DarkBlue);
+}
+h2{
+    font-size: 1.875rem;
+    margin-bottom: 1.5625rem;
+    @media (min-width: 750px){
+        font-size: 2.25rem;
+        margin-bottom: 2.25rem;
+    }
+    
 }
 
 nav{
@@ -312,14 +324,70 @@ a:not(:last-child){
         text-align: left;
     }
 }
-.hero__h1{
-    font-weight: 300;
+/* .hero__h1{ */
+h1{
     font-size: 2.31rem;
-    line-height: 1.15;
-    color: var(--DarkBlue);
     margin-bottom: 1.5rem;
 }
 p{
     line-height: 1.5;
     margin-bottom: 2.25rem;
+}
+
+
+/* features */
+.features{
+    background-color: var(--LightGrayishBlue);
+    padding-top: 4.375rem;
+    padding-bottom: 4.375rem;
+    text-align: center;
+}
+.feature__intro{
+    margin-bottom: 3.75rem;
+    @media (min-width: 750px)
+    {
+        width: 60%;
+    }
+
+}
+.feature__grid{
+    @media (min-width: 750px)
+    {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+}
+
+.feature__item{
+    padding:0.975rem;
+    @media (min-width: 750px)
+    {
+        flex:1;
+    }
+}
+
+.feature__icon{
+    margin-bottom: 1.875rem;
+    @media(min-width: 750px){
+        margin-bottom: 2.75rem;
+    }
+    
+
+}
+.feature__title{
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--DarkBlue);
+    margin-bottom: 1rem;
+     @media(min-width: 750px){
+        font-size: 1.5rem;
+        margin-bottom: 2.125rem;
+     }
+
+}
+.feature__description{
+    font-size: 0.875rem;
+    line-height: 1.5;
 }
