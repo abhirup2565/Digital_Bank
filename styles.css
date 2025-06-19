@@ -4,7 +4,8 @@ html{
 }
 
 nav{
-    padding: 1.0625rem 1.5rem;
+    padding-top: 1.0625rem ;
+    padding-bottom: 1.0625rem;
 }
 /* colors */
 :root{
@@ -34,6 +35,11 @@ body{
     line-height:1.3;
 }
 
+.container{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
 .flex{
     display: flex;
     }
@@ -56,9 +62,29 @@ body{
         height: 1.375rem;
     }
 
-.header__menu{
+.header__toggle{
 
 }
+
+.header__menu{
+    position: absolute;
+    width: calc(100%-3rem);
+    left: 50%;
+    transform:translateX(-50%);
+    background: var(--White);
+    margin: 0 1.5px;
+    padding: 1.625rem;
+    border-radius: 3px;
+    margin-top: 1.5rem;
+
+    a{
+        display: block;
+        color: var(--DarkBlue);
+        padding: 0.625rem;
+        text-align: center;
+    }
+}
+
 .header_span{
             display: block;
             width: 26px;
@@ -172,6 +198,10 @@ a:not(:last-child){
 {
     animation: fade-out 300ms ease-in-out forwards;
 }
+.has-fade
+{
+    visibility: hidden;
+}
 
 /* Animations */
 @keyframes fade-in{
@@ -184,6 +214,7 @@ a:not(:last-child){
         opacity: 0;
     }
     to{
+        visibility: visible;
         opacity: 1;
     }
 }
@@ -200,4 +231,7 @@ a:not(:last-child){
         visibility: hidden;
         opacity: 0;
     }
+}
+.noscroll{
+    overflow: hidden;
 }
