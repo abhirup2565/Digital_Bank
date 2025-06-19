@@ -64,6 +64,7 @@ body{
             width: 26px;
             height: 2px;
             background-color: var(--DarkBlue);
+            transform-origin: 6px 1px;
             
 }
 
@@ -95,7 +96,7 @@ a::before{
     bottom: -30px;
     background: linear-gradient(to right, var(--LimeGreen),var(--BrightCyan));
     opacity: 0;
-    transition: opacity 200ms ease-in-out;
+    transition: opacity 300ms ease-in-out;
 }
 a:hover{
     font-size: var(--fontsm);
@@ -123,7 +124,7 @@ a:not(:last-child){
     border: 0;
     color: white;
     font-weight: 700;
-    transition: opacity 200ms ease-in-out;
+    transition: opacity 300ms ease-in-out;
 }
 .header__cta:hover{
     opacity:0.75;
@@ -131,13 +132,72 @@ a:not(:last-child){
 
 /* Visiblity */
 .hide-for-mobile{
-    @media (max-width: 599px) {
+    @media (max-width: 749px) {
         display: none;
     }
 }
 .hide-for-desktop{
-    @media (min-width: 600px) {
+    @media (min-width: 750px) {
         display: none;
     }
 }
 
+.ham_open{
+    span:first-child{
+        transform:rotate(45deg);
+    }
+    span:nth-child(2){
+        opacity: 0;
+    }
+    span:last-child{
+        transform: rotate(-45deg);
+        
+    }
+}
+
+.overlay
+{
+    position: fixed;
+    top:4.25rem;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-image: linear-gradient(var(--DarkBlue),transparent);
+}
+.fadein
+{
+    animation: fade-in 300ms ease-in-out forwards;
+}
+.fadeout
+{
+    animation: fade-out 300ms ease-in-out forwards;
+}
+
+/* Animations */
+@keyframes fade-in{
+    from{
+       visibility: hidden;
+        opacity: 0;
+    }
+    1%{
+        visibility: visible;
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes fade-out{
+    from{
+        visibility: visible;
+        opacity: 1;
+    }
+    99%{
+        visibility: visible;
+        opacity: 0;
+    }
+    to{
+        visibility: hidden;
+        opacity: 0;
+    }
+}
