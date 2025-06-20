@@ -1,2 +1,3 @@
 line under btn and icon
-abrupt animation in overlay
+abrupt animation in overlay //solved
+article on hover text line changes
