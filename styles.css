@@ -93,13 +93,19 @@ body{
     padding: 1.625rem;
     border-radius: 3px;
     margin-top: 1.5rem;
-
-    a{
+    z-index: 2;
+}
+.header__menu_a{
         display: block;
         color: var(--DarkBlue);
         padding: 0.625rem;
-        text-align: center;
+        justify-self: center;
+        align-self: center;
     }
+.header__menu_a::before{
+    content: '';
+    display: none;
+
 }
 
 .header_span{
@@ -206,6 +212,7 @@ a:not(:last-child){
     bottom: 0px;
     left: 0px;
     background-image: linear-gradient(var(--DarkBlue),transparent);
+    z-index: 1;
 }
 .fadein
 {
@@ -457,4 +464,106 @@ p{
 .article__description{
     font-size: 0.8125rem;
 }
+.try
+{ 
+    color: var(--White);
+ }
+ .try:hover{
+    color: var(--White);
+ }
+.try::before
+{
+    content:'';
+    display: none;
+}
+
+/* footer */
+.footer{
+    background-color: var(--DarkBlue);
+    color: var(--White);
+    padding:2.5rem;
+    text-align: center;
+
+    @media(min-width: 750px)
+    {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 3fr;
+        grid-template-rows: 1fr auto;
+        grid-template-areas: "logo links1 links2 cta" "social links1 links2 copyright";
+        justify-items: start;
+        gap: 1rem;
+    }
+
+}
+.footer__logo{
+    margin-bottom: 1.875rems;
+     @media(min-width: 750px)
+    {
+        grid-area: logo;
+    }
+}
+.footer__social{
+    display: block;
+    margin-bottom: 1.875rems;
+    @media(min-width: 750px)
+    {
+        grid-area: social;
+        align-items: end;
+    }
+}
+.footer_social_a:not(:last-child){
+        display: inline-block;
+        margin-right: 1rem;
+    }
+.footer_social_a::before{
+    content: "";
+    display: none;
+}
+.footer__links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 2.25;
+    font-size: 0.9375;
+    @media(min-width: 750px)
+    {
+        justify-content: space-between;
+        align-items: start;
+    }
+
+}
+.footer__links_col1{
+    @media(min-width: 750px)
+    {
+        grid-area: links1;
+        justify-self: center;
+    }
+}
+.footer__links_col2{
+    margin-bottom: 1.875rems;
+    @media(min-width: 750px)
+    {
+        grid-area: links2;
+        justify-self: center;
+    }
+}
+.footer__cta{
+    margin-bottom: 1.875rems;
+    @media(min-width: 750px)
+    {
+        grid-area: cta;
+        text-align: right;
+        justify-self: end;
+    }
+}
+.footer__copyright{
+    font-size: 0.9375;
+    @media(min-width: 750px)
+    {
+        grid-area: copyright;
+        align-self: end;
+        justify-self: end;
+    }
+}
+
 
